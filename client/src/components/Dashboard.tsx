@@ -24,6 +24,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import AddIcon from "@mui/icons-material/Add";
 import { useUser } from "../components/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard: React.FC = () => {
   const [tasks, setTasks] = useState<TaskResponse[]>([]);
@@ -31,6 +32,13 @@ const Dashboard: React.FC = () => {
   const [currentTask, setCurrentTask] = useState<TaskResponse | null>(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const { user } = useUser();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
 
   useEffect(() => {
     if (user) {
