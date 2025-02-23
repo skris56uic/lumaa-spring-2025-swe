@@ -27,10 +27,4 @@ const db: DB = {
   Task: taskModel(seq),
 };
 
-db.User.hasMany(db.Task, { as: "tasks" });
-db.Task.belongsTo(db.User, {
-  foreignKey: "userId",
-  as: "user",
-});
-
 export default db;

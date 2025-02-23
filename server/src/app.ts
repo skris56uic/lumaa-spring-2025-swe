@@ -3,8 +3,16 @@ import bodyParser from "body-parser";
 import db from "./models";
 import authRoutes from "./routes/authRoutes";
 import taskRoutes from "./routes/taskRoutes";
+import cors from "cors";
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Replace with your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.use(bodyParser.json());
 
