@@ -4,6 +4,10 @@ This is a full-stack Task Management application built with React, TypeScript, N
 
 ---
 
+## Demo Recording
+
+[Watch the demo](https://uic.zoom.us/rec/share/v346_DxGSiuPdzXsQ9yXcKL5LVIIMOTIHmx8H7hOPtJ60cNg9xWbZ1PA-VlLFwdF.mmAct0XmHZikrFT4?startTime=1740284176000)
+
 ## Features
 
 - User registration and login with JWT authentication.
@@ -41,12 +45,16 @@ Make sure PostgreSQL is running and accessible on your local machine. On Windows
 # Project Setup
 
 ## Backend
+
 Navigate to the `backend` folder and install dependencies:
+
 ```sh
 cd backend
 npm install
 ```
+
 Before starting the server, create a `.env` file in the `backend` folder with the following content:
+
 ```
 DB_USER=postgres
 DB_HOST=localhost
@@ -54,24 +62,30 @@ DB_NAME=postgres
 DB_PASSWORD=krishna
 JWT_SECRET=testme
 ```
+
 Then start the development server:
+
 ```sh
 npm run dev
 ```
 
 ## Frontend
+
 Navigate to the `frontend` folder and install dependencies:
+
 ```sh
 cd frontend
 npm install
 ```
+
 Then start the development server:
+
 ```sh
 npm run dev
 ```
 
 ## Salary Expectations
+
 ```
 $20/hour × 40 hours/week × 4 weeks/month = $3,200 per month
 ```
-
