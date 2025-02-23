@@ -2,14 +2,17 @@ import React from "react";
 import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../components/UserContext";
+import { useSnackbar } from "./SnackBarContext";
 
 const Header: React.FC = () => {
   const { user, setUser } = useUser();
   const navigate = useNavigate();
+  const {showMessage} = useSnackbar()
 
   const handleLogout = () => {
     setUser(null);
     navigate("/login");
+    showMessage("Logged out successfully", "success")
   };
 
   return (
